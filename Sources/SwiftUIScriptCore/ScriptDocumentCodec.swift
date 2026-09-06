@@ -118,9 +118,9 @@ public struct ScriptDocumentCodec: Sendable {
     }
 
     private func validateJSONNumbers(_ value: Any, depth: Int = 0) throws(Error) {
-        let structuralLimit = maximumDepth > (Int.max - 8) / 4
+        let structuralLimit = maximumDepth > (Int.max - 16) / 8
             ? Int.max
-            : maximumDepth * 4 + 8
+            : maximumDepth * 8 + 16
         guard depth <= structuralLimit else {
             throw .depthLimitExceeded(depth)
         }

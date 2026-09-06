@@ -161,6 +161,13 @@ struct ScriptDocumentCodecTests {
         }
     }
 
+    @Test
+    func roundTripsBackgroundChainAtDepthLimit() throws {
+        let document = ScriptDocument(root: backgroundChain(count: 32))
+        let codec = try ScriptDocumentCodec(maximumDepth: 32)
+        #expect(try codec.decode(codec.encode(document)) == document)
+    }
+
     private func nestedNode(count: Int) -> ScriptNode {
         guard count > 1 else { return ScriptNode(kind: .text("leaf")) }
         return ScriptNode(
@@ -169,6 +176,14 @@ struct ScriptDocumentCodecTests {
                 spacing: nil,
                 children: [nestedNode(count: count - 1)]
             )
+        )
+    }
+
+    private func backgroundChain(count: Int) -> ScriptNode {
+        guard count > 1 else { return ScriptNode(kind: .text("leaf")) }
+        return ScriptNode(
+            kind: .text("node"),
+            modifiers: [.background(.node(backgroundChain(count: count - 1)))]
         )
     }
 }
