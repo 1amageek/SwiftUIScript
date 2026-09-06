@@ -48,8 +48,17 @@ flowchart LR
   Group, network entitlement, or account-specific signing setting.
 - The example targets iOS 27 and supports simulator compilation with
   `CODE_SIGNING_ALLOWED=NO`.
+- Debug builds use `ONLY_ACTIVE_ARCH=YES` so the App, Widget Extension, and
+  Swift package products build for the selected destination consistently.
+  Release architecture settings remain unchanged.
+- Debug builds enable `ENABLE_PREVIEWS` so Xcode can select the example App
+  and Widget Extension as preview hosts for the package's Gallery sources.
 - Only the Widget Extension links `SwiftUIScriptGallery`; the App target has
   no dependency on package internals.
+- `RenderingPreview.swift` owns an extension-local WidgetKit preview of the
+  public compiler and renderer. Its sample content stays inside `#Preview`;
+  it does not add a registered Widget or change package APIs. This isolates
+  native rendering verification from package-source preview host discovery.
 
 ## Runtime Flows
 
@@ -61,9 +70,11 @@ Xcode opens WidgetPreview.xcodeproj
     -> Gallery preview content is shown in Canvas or simulator
 ```
 
-The example does not claim a native Canvas result until an Xcode 27 host
-inspection is performed. A successful simulator compile proves only the
-project graph and target compatibility.
+The extension-local Large Widget preview was visually verified in Xcode 27
+Canvas on an iPhone 17 Pro simulator on September 6, 2026. It exercised
+script-generated text, SF Symbol images, shapes, and layout. Package-source
+Gallery previews still fail host discovery in this environment; Home Screen
+installation and macOS desktop rendering remain separate verification gates.
 
 ## State, Ownership, and Lifecycle
 

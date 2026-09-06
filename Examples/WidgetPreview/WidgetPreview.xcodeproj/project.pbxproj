@@ -1,41 +1,368 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
-	objectVersion = 77;
-	objects = {
-		AA0000000000000000000001 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 2700;}; buildConfigurationList = AA0000000000000000000010; compatibilityVersion = "Xcode 16.0"; developmentRegion = en; knownRegions = (en, Base); mainGroup = AA0000000000000000000002; packageReferences = (AA0000000000000000000030); preferredProjectObjectVersion = 77; productRefGroup = AA0000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = (AA0000000000000000000020, AA0000000000000000000021);};
-		AA0000000000000000000002 = {isa = PBXGroup; children = (AA0000000000000000000004, AA0000000000000000000005, AA0000000000000000000003); sourceTree = "<group>";};
-		AA0000000000000000000003 = {isa = PBXGroup; children = (AA0000000000000000000006, AA0000000000000000000007); name = Products; sourceTree = "<group>";};
-		AA0000000000000000000004 = {isa = PBXFileSystemSynchronizedRootGroup; path = App; sourceTree = "<group>";};
-		AA0000000000000000000005 = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (AA0000000000000000000008); path = Widgets; sourceTree = "<group>";};
-		AA0000000000000000000006 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WidgetPreviewHost.app; sourceTree = BUILT_PRODUCTS_DIR;};
-		AA0000000000000000000007 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = WidgetPreviewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR;};
-		AA0000000000000000000008 = {isa = PBXFileSystemSynchronizedBuildFileExceptionSet; membershipExceptions = (Info.plist); target = AA0000000000000000000021;};
-		AA0000000000000000000010 = {isa = XCConfigurationList; buildConfigurations = (AA0000000000000000000011, AA0000000000000000000012); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
-		AA0000000000000000000011 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 6.0; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES;};};
-		AA0000000000000000000012 = {isa = XCBuildConfiguration; name = Release; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 6.0; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_COMPILATION_MODE = wholemodule;};};
-		AA0000000000000000000013 = {isa = XCConfigurationList; buildConfigurations = (AA0000000000000000000014, AA0000000000000000000015); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
-		AA0000000000000000000014 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";};};
-		AA0000000000000000000015 = {isa = XCBuildConfiguration; name = Release; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";};};
-		AA0000000000000000000016 = {isa = XCConfigurationList; buildConfigurations = (AA0000000000000000000017, AA0000000000000000000018); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
-		AA0000000000000000000017 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview.widget; INFOPLIST_FILE = Widgets/Info.plist; GENERATE_INFOPLIST_FILE = YES; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; APPLICATION_EXTENSION_API_ONLY = YES; SKIP_INSTALL = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";};};
-		AA0000000000000000000018 = {isa = XCBuildConfiguration; name = Release; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview.widget; INFOPLIST_FILE = Widgets/Info.plist; GENERATE_INFOPLIST_FILE = YES; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; APPLICATION_EXTENSION_API_ONLY = YES; SKIP_INSTALL = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";};};
-		AA0000000000000000000020 = {isa = PBXNativeTarget; buildConfigurationList = AA0000000000000000000013; buildPhases = (AA0000000000000000000022, AA0000000000000000000023, AA0000000000000000000024, AA0000000000000000000029); buildRules = (); dependencies = (AA0000000000000000000034); fileSystemSynchronizedGroups = (AA0000000000000000000004); name = WidgetPreviewHost; productName = WidgetPreviewHost; productReference = AA0000000000000000000006; productType = "com.apple.product-type.application";};
-		AA0000000000000000000021 = {isa = PBXNativeTarget; buildConfigurationList = AA0000000000000000000016; buildPhases = (AA0000000000000000000025, AA0000000000000000000026, AA0000000000000000000027); buildRules = (); dependencies = (); fileSystemSynchronizedGroups = (AA0000000000000000000005); name = WidgetPreviewExtension; packageProductDependencies = (AA0000000000000000000031); productName = WidgetPreviewExtension; productReference = AA0000000000000000000007; productType = "com.apple.product-type.app-extension";};
-		AA0000000000000000000022 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000023 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000024 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000025 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000026 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (AA0000000000000000000032); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000027 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000028 = {isa = PBXBuildFile; fileRef = AA0000000000000000000007; settings = {ATTRIBUTES = (RemoveHeadersOnCopy);};};
-		AA0000000000000000000029 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (AA0000000000000000000028); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0;};
-		AA0000000000000000000030 = {isa = XCLocalSwiftPackageReference; relativePath = ../..;};
-		AA0000000000000000000031 = {isa = XCSwiftPackageProductDependency; package = AA0000000000000000000030; productName = SwiftUIScriptGallery;};
-		AA0000000000000000000032 = {isa = PBXBuildFile; productRef = AA0000000000000000000031;};
-		AA0000000000000000000033 = {isa = PBXContainerItemProxy; containerPortal = AA0000000000000000000001; proxyType = 1; remoteGlobalIDString = AA0000000000000000000021; remoteInfo = WidgetPreviewExtension;};
-		AA0000000000000000000034 = {isa = PBXTargetDependency; target = AA0000000000000000000021; targetProxy = AA0000000000000000000033;};
+	classes = {
 	};
-	rootObject = AA0000000000000000000001;
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000000000000000000028 /* WidgetPreviewExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* WidgetPreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA0000000000000000000032 /* SwiftUIScriptGallery in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000031 /* SwiftUIScriptGallery */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA0000000000000000000033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0000000000000000000021;
+			remoteInfo = WidgetPreviewExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA0000000000000000000029 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA0000000000000000000028 /* WidgetPreviewExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA0000000000000000000006 /* WidgetPreviewHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WidgetPreviewHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000007 /* WidgetPreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = WidgetPreviewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AA0000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AA0000000000000000000021 /* WidgetPreviewExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AA0000000000000000000004 /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* Widgets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (AA0000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Widgets; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0000000000000000000023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000032 /* SwiftUIScriptGallery in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000004 /* App */,
+				AA0000000000000000000005 /* Widgets */,
+				AA0000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000006 /* WidgetPreviewHost.app */,
+				AA0000000000000000000007 /* WidgetPreviewExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0000000000000000000020 /* WidgetPreviewHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000013 /* Build configuration list for PBXNativeTarget "WidgetPreviewHost" */;
+			buildPhases = (
+				AA0000000000000000000022 /* Sources */,
+				AA0000000000000000000023 /* Frameworks */,
+				AA0000000000000000000024 /* Resources */,
+				AA0000000000000000000029 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA0000000000000000000034 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AA0000000000000000000004 /* App */,
+			);
+			name = WidgetPreviewHost;
+			productName = WidgetPreviewHost;
+			productReference = AA0000000000000000000006 /* WidgetPreviewHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA0000000000000000000021 /* WidgetPreviewExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000016 /* Build configuration list for PBXNativeTarget "WidgetPreviewExtension" */;
+			buildPhases = (
+				AA0000000000000000000025 /* Sources */,
+				AA0000000000000000000026 /* Frameworks */,
+				AA0000000000000000000027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AA0000000000000000000005 /* Widgets */,
+			);
+			name = WidgetPreviewExtension;
+			packageProductDependencies = (
+				AA0000000000000000000031 /* SwiftUIScriptGallery */,
+			);
+			productName = WidgetPreviewExtension;
+			productReference = AA0000000000000000000007 /* WidgetPreviewExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = AA0000000000000000000010 /* Build configuration list for PBXProject "WidgetPreview" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000002;
+			packageReferences = (
+				AA0000000000000000000030 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			productRefGroup = AA0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000020 /* WidgetPreviewHost */,
+				AA0000000000000000000021 /* WidgetPreviewExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000024 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0000000000000000000034 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0000000000000000000021 /* WidgetPreviewExtension */;
+			targetProxy = AA0000000000000000000033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AA0000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0000000000000000000014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AA0000000000000000000017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.example.swiftuiscript.preview.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0000000000000000000010 /* Build configuration list for PBXProject "WidgetPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000011 /* Debug */,
+				AA0000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000013 /* Build configuration list for PBXNativeTarget "WidgetPreviewHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000014 /* Debug */,
+				AA0000000000000000000015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000016 /* Build configuration list for PBXNativeTarget "WidgetPreviewExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000017 /* Debug */,
+				AA0000000000000000000018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AA0000000000000000000030 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA0000000000000000000031 /* SwiftUIScriptGallery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA0000000000000000000030 /* XCLocalSwiftPackageReference "../.." */;
+			productName = SwiftUIScriptGallery;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AA0000000000000000000001 /* Project object */;
 }

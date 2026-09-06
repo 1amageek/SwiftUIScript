@@ -94,7 +94,9 @@ Modifier order is preserved. Receiver-specific modifiers remain receiver-specifi
 
 ## Widget previews
 
-Open [Examples/WidgetPreview/WidgetPreview.xcodeproj](Examples/WidgetPreview/WidgetPreview.xcodeproj) in Xcode 27, choose the `WidgetPreviewHost` scheme and an iOS 27 simulator, then open a preview file under `Sources/SwiftUIScriptGallery` and resume Canvas.
+Open [Examples/WidgetPreview/WidgetPreview.xcodeproj](Examples/WidgetPreview/WidgetPreview.xcodeproj) in Xcode 27, choose the `WidgetPreviewHost` scheme and an iOS 27 simulator, then open [RenderingPreview.swift](Examples/WidgetPreview/Widgets/RenderingPreview.swift) and resume Canvas. This extension-local preview exercises the public compiler and renderer without requiring a package-source Widget preview host.
+
+Additional static gallery samples live under `Sources/SwiftUIScriptGallery`:
 
 | Widget family | Independent previews |
 |---|---|
@@ -104,7 +106,7 @@ Open [Examples/WidgetPreview/WidgetPreview.xcodeproj](Examples/WidgetPreview/Wid
 
 The examples use native WidgetKit preview macros, system-owned family sizes, and bundled images. They are static visual samples, not live services or working playback/search controls. The example host uses generic bundle identifiers and contains no configured developer team.
 
-Package tests exercise source compilation, native pixel comparisons, image failures, and constrained layout proposals. The native preview host is buildable; Canvas appearance and actual device/desktop Widget rendering are not yet verified. A passing render test or host build is not proof of WidgetKit runtime compatibility for every document or rendering mode.
+Package tests exercise source compilation, native pixel comparisons, image failures, and constrained layout proposals. On September 6, 2026, the extension-local Large Widget preview was visually verified in Xcode 27 Canvas on an iPhone 17 Pro simulator: script-generated text, SF Symbol images, shapes, and layout rendered successfully. The package-source Gallery previews still report "No candidates found to host preview" in this environment. Bundled photographs, other families and rendering modes, Home Screen installation, and macOS desktop rendering are not covered by this Canvas result.
 
 ## Scope and safety
 
