@@ -4,7 +4,7 @@ import SwiftUIScriptCore
 
 struct ScriptDocumentCodecTests {
     @Test
-    func roundTripPreservesCompiledDocument() throws {
+    func roundTripPreservesCoreDocument() throws {
         let document = ScriptDocument(
             root: ScriptNode(
                 kind: .vStack(
@@ -144,6 +144,20 @@ struct ScriptDocumentCodecTests {
         )
         #expect(throws: ScriptDocumentCodec.Error.numericLimitExceeded(11)) {
             try limited.encode(overLimit)
+        }
+
+        let invalidHex = ScriptDocument(
+            root: ScriptNode(
+                kind: .text("value"),
+                modifiers: [.foregroundStyle(.hex("not-a-color"))]
+            )
+        )
+        #expect(
+            throws: ScriptDocumentCodec.Error.invalidDocument(
+                "A hex color must contain six or eight hexadecimal digits."
+            )
+        ) {
+            try codec.encode(invalidHex)
         }
     }
 

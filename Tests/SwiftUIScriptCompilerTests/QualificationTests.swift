@@ -72,6 +72,20 @@ struct QualificationTests {
     }
 
     @Test
+    func compilerDocumentRoundTripsThroughCodec() throws {
+        let document = try ScriptCompiler().compile(
+            """
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Generated document").font(.headline)
+                Rectangle().fill(Color.blue).frame(width: 80, height: 20)
+            }
+            """
+        )
+        let codec = try ScriptDocumentCodec()
+        #expect(try codec.decode(codec.encode(document)) == document)
+    }
+
+    @Test
     func rejectsUnboundedExpansion() {
         let compiler = ScriptCompiler(
             profile: .init(maxDepth: 12, maxExpandedNodes: 8, maxIterations: 8))

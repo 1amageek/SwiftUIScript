@@ -277,11 +277,18 @@ private struct ScriptValidationState {
     }
 
     mutating func validate(_ color: ScriptColor) throws(ScriptDocumentCodec.Error) {
-        if case let .rgb(red, green, blue, opacity) = color {
+        switch color {
+        case let .hex(value):
+            guard isValidHexColor(value) else {
+                throw .invalidDocument("A hex color must contain six or eight hexadecimal digits.")
+            }
+        case let .rgb(red, green, blue, opacity):
             try validate(red)
             try validate(green)
             try validate(blue)
             try validate(opacity)
+        case .named:
+            break
         }
     }
 
@@ -324,6 +331,12 @@ private struct ScriptValidationState {
             throw .numericLimitExceeded(double)
         }
     }
+}
+
+private func isValidHexColor(_ string: String) -> Bool {
+    let value = string.hasPrefix("#") ? String(string.dropFirst()) : string
+    guard value.count == 6 || value.count == 8 else { return false }
+    return UInt64(value, radix: 16) != nil
 }
 
 private func jsonEqual(_ lhs: Any, _ rhs: Any) -> Bool {
