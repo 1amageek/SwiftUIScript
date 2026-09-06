@@ -42,7 +42,10 @@ public struct ScriptCompiler: Sendable {
         }
 
         // ponytail: cap parser nesting for cooperative-thread debug stacks; qualify a larger limit before raising it.
-        let file = Parser.parse(source: source, maximumNestingLevel: min(profile.maxDepth, 12))
+        var source = source
+        let file = source.withUTF8 { buffer in
+            Parser.parse(source: buffer, maximumNestingLevel: min(profile.maxDepth, 12))
+        }
         guard !file.hasError else {
             throw .parseRecovery(location: location(of: file))
         }

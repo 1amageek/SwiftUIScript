@@ -1,12 +1,12 @@
-// swift-tools-version: 6.4
+// swift-tools-version: 6.3
 
 import PackageDescription
 
 let package = Package(
     name: "SwiftUIScript",
     platforms: [
-        .iOS(.v27),
-        .macOS(.v27),
+        .iOS(.v26),
+        .macOS(.v26),
     ],
     products: [
         .library(name: "SwiftUIScriptCore", targets: ["SwiftUIScriptCore"]),
@@ -17,7 +17,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/swiftlang/swift-syntax.git",
-            revision: "cb90b3bcdbf9a8db931fb3d711c2e0e2a45f284d"
+            exact: "603.0.2"
         ),
     ],
     targets: [

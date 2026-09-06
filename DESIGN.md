@@ -6,8 +6,11 @@ SwiftUIScript is an independent Swift Package for compiling a bounded,
 declarative SwiftUI presentation subset into an immutable typed document and
 rendering that document with native SwiftUI. The package currently contains
 four products: `SwiftUIScriptCore`, `SwiftUIScriptCompiler`, `SwiftUIScript`,
-and the preview-only `SwiftUIScriptGallery`. The package targets iOS 27 and
-macOS 27 with Swift tools 6.4.
+and the preview-only `SwiftUIScriptGallery`. The package compatibility
+baseline is iOS 26 and macOS 26 with Swift tools 6.3. The compiler uses the
+stable SemVer `swift-syntax` 603.0.2 release rather than a development
+snapshot. The optional WidgetPreview example may use a newer Xcode host for
+Canvas inspection, but that host is not the package compatibility baseline.
 
 The package is a presentation library and preview qualification surface. It
 does not provide an application runtime, persistence, networking, credentials,
@@ -31,6 +34,11 @@ agent execution, or service integration.
 No target in this package performs network or filesystem work during source
 compilation or rendering. No document node contains executable callbacks or
 interactive authority.
+
+The package's source and renderer APIs must remain compilable with Swift 6.3
+and the iOS 26/macOS 26 SDKs. A newer example host or Xcode Canvas is a
+separate verification surface and must not introduce a package-level
+dependency on newer platform APIs.
 
 ## Related Designs
 

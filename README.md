@@ -17,17 +17,22 @@ flowchart LR
 
 Experimental. The current implementation supports the visual language listed below, not the complete SwiftUI API or a general-purpose scripting runtime.
 
-- Swift 6.4 and Xcode 27 beta.
-- iOS 27 or macOS 27 for the declared package platforms.
+- Swift 6.3 and Xcode 26.6 (or a newer compatible Xcode).
+- iOS 26 or macOS 26 for the declared package platforms.
 - Tests use AppKit and run on macOS.
-- SwiftParser and SwiftSyntax are pinned to a development revision in `Package.swift`.
+- SwiftParser and SwiftSyntax use the exact stable `swift-syntax` 603.0.2
+  release in `Package.swift`.
+
+The package baseline is intentionally independent of the optional WidgetPreview
+example host. The example may use a newer Xcode/iOS simulator for Canvas
+inspection, but package products do not require those newer platform versions.
 
 ## Installation
 
 Add the package with Swift Package Manager:
 
 ```swift
-.package(url: "https://github.com/1amageek/SwiftUIScript.git", branch: "main")
+.package(url: "https://github.com/1amageek/SwiftUIScript.git", from: "0.1.0")
 ```
 
 Add `SwiftUIScriptCompiler` and `SwiftUIScript` to the target that prepares and renders source. A renderer-only target can depend on `SwiftUIScript` without bringing in SwiftSyntax.
@@ -39,7 +44,9 @@ Add `SwiftUIScriptCompiler` and `SwiftUIScript` to the target that prepares and 
 | `SwiftUIScript` | Native SwiftUI rendering and host image resolution |
 | `SwiftUIScriptGallery` | Optional WidgetKit preview samples; not required by the runtime products |
 
-The initial repository uses `main` and has no versioned release yet. Pin a commit revision when reproducible dependency resolution is needed.
+The initial repository is released as `0.1.0` from `main`. The
+`swift-syntax` dependency is pinned to the stable 603.0.2 release for
+reproducible dependency resolution.
 
 ## Usage
 
