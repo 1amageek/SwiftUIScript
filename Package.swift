@@ -55,6 +55,11 @@ let package = Package(
             path: "Tests/SwiftUIScriptCompilerTests"
         ),
         .testTarget(
+            name: "SwiftUIScriptCoreTests",
+            dependencies: ["SwiftUIScriptCore"],
+            path: "Tests/SwiftUIScriptCoreTests"
+        ),
+        .testTarget(
             name: "SwiftUIScriptTests",
             dependencies: ["SwiftUIScript", "SwiftUIScriptCompiler", "SwiftUIScriptCore"],
             path: "Tests/SwiftUIScriptTests"

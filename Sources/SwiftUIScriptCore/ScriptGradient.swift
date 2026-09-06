@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ScriptLinearGradient: Equatable, Sendable {
+public struct ScriptLinearGradient: Codable, Equatable, Sendable {
     public let colors: [ScriptColor]
     public let startPoint: ScriptUnitPoint
     public let endPoint: ScriptUnitPoint
@@ -16,7 +16,7 @@ public struct ScriptLinearGradient: Equatable, Sendable {
     }
 }
 
-public enum ScriptUnitPoint: String, Equatable, Sendable {
+public enum ScriptUnitPoint: String, Codable, Equatable, Sendable {
     case topLeading
     case top
     case topTrailing

@@ -1,6 +1,6 @@
 import Foundation
 
-public indirect enum ScriptModifier: Equatable, Sendable {
+public indirect enum ScriptModifier: Codable, Equatable, Sendable {
     case font(ScriptFont)
     case foregroundStyle(ScriptColor)
     case frame(ScriptFrame)
@@ -23,7 +23,7 @@ public indirect enum ScriptModifier: Equatable, Sendable {
     case stroke(color: ScriptColor, lineWidth: Double)
 }
 
-public indirect enum ScriptBackground: Equatable, Sendable {
+public indirect enum ScriptBackground: Codable, Equatable, Sendable {
     case color(ScriptColor)
     case linearGradient(ScriptLinearGradient)
     case node(ScriptNode)

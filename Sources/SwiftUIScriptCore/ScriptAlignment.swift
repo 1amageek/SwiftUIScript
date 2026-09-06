@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ScriptAlignment: String, Equatable, Sendable {
+public enum ScriptAlignment: String, Codable, Equatable, Sendable {
     case leading
     case center
     case trailing
@@ -12,7 +12,7 @@ public enum ScriptAlignment: String, Equatable, Sendable {
     case bottomTrailing
 }
 
-public enum ScriptVerticalAlignment: String, Equatable, Sendable {
+public enum ScriptVerticalAlignment: String, Codable, Equatable, Sendable {
     case top
     case center
     case bottom
@@ -20,7 +20,7 @@ public enum ScriptVerticalAlignment: String, Equatable, Sendable {
     case lastTextBaseline
 }
 
-public enum ScriptEdge: String, Equatable, Sendable {
+public enum ScriptEdge: String, Codable, Equatable, Sendable {
     case all
     case horizontal
     case vertical
@@ -30,7 +30,7 @@ public enum ScriptEdge: String, Equatable, Sendable {
     case trailing
 }
 
-public enum ScriptTextAlignment: String, Equatable, Sendable {
+public enum ScriptTextAlignment: String, Codable, Equatable, Sendable {
     case leading
     case center
     case trailing

@@ -1,12 +1,12 @@
 import Foundation
 
-public enum ScriptColor: Equatable, Sendable {
+public enum ScriptColor: Codable, Equatable, Sendable {
     case hex(String)
     case rgb(red: Double, green: Double, blue: Double, opacity: Double)
     case named(ScriptNamedColor)
 }
 
-public enum ScriptNamedColor: String, Equatable, Sendable {
+public enum ScriptNamedColor: String, Codable, Equatable, Sendable {
     case clear
     case black
     case white

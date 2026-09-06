@@ -1,11 +1,11 @@
 import Foundation
 
-public enum ScriptFont: Equatable, Sendable {
+public enum ScriptFont: Codable, Equatable, Sendable {
     case named(ScriptNamedFont)
     case system(size: Double, weight: ScriptFontWeight?, design: ScriptFontDesign?)
 }
 
-public enum ScriptNamedFont: String, Equatable, Sendable {
+public enum ScriptNamedFont: String, Codable, Equatable, Sendable {
     case largeTitle
     case title
     case title2
@@ -19,7 +19,7 @@ public enum ScriptNamedFont: String, Equatable, Sendable {
     case caption2
 }
 
-public enum ScriptFontWeight: String, Equatable, Sendable {
+public enum ScriptFontWeight: String, Codable, Equatable, Sendable {
     case ultraLight
     case thin
     case light
@@ -31,7 +31,7 @@ public enum ScriptFontWeight: String, Equatable, Sendable {
     case black
 }
 
-public enum ScriptFontDesign: String, Equatable, Sendable {
+public enum ScriptFontDesign: String, Codable, Equatable, Sendable {
     case `default`
     case rounded
     case serif

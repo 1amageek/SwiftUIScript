@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ScriptShape: Equatable, Sendable {
+public enum ScriptShape: Codable, Equatable, Sendable {
     case rectangle
     case roundedRectangle(cornerRadius: Double)
     case circle

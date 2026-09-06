@@ -1,7 +1,7 @@
 import Foundation
 
 /// An immutable compiled SwiftUIScript document.
-public struct ScriptDocument: Equatable, Sendable {
+public struct ScriptDocument: Codable, Equatable, Sendable {
     public static let formatVersion = 1
 
     public let formatVersion: Int

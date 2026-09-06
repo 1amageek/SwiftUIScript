@@ -1,7 +1,7 @@
 import Foundation
 
 /// A typed node in the portable presentation tree.
-public struct ScriptNode: Equatable, Sendable {
+public struct ScriptNode: Codable, Equatable, Sendable {
     public let kind: ScriptNodeKind
     public let modifiers: [ScriptModifier]
 
@@ -15,7 +15,7 @@ public struct ScriptNode: Equatable, Sendable {
     }
 }
 
-public indirect enum ScriptNodeKind: Equatable, Sendable {
+public indirect enum ScriptNodeKind: Codable, Equatable, Sendable {
     case text(String)
     case label(text: String, systemImage: String)
     case image(ScriptImage)
